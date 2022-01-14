@@ -15,6 +15,7 @@ import constants
 from infer import get_model, process_image
 
 app = Flask(__name__)
+app.config['JSONIFY_PRETTYPRINT_REGULAR'] = False
 
 
 def create_folders():
@@ -71,12 +72,17 @@ if __name__ == "__main__":
     parser.add_argument('--device', required=False,
                         default='cpu',
                         help="Device to run evaluation on [cpu(default)|gpu]")
+    parser.add_argument('--ngrok', required=False, dest="ngrok", action='store_true')
     args = parser.parse_args()
 
     assert args.device == 'cpu' or args.device == 'gpu', "Device should either be 'cpu' or 'gpu'"
+
+    if args.ngrok:
+        from flask_ngrok import run_with_ngrok
+        run_with_ngrok(app)
 
     mdl = get_model(weight_path=args.weights, device=args.device)
 
     app.config['UPLOAD_FOLDER'] = constants.UPLOAD_DIR
     app.secret_key = 'supersecret'
-    app.run(threaded=False)
+    app.run()

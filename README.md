@@ -28,9 +28,14 @@ View [Step_1_Working_Process.md](Step_1_Working_Process.md) for steps taken whil
 * You can take a look at `Step_1_Retrain_Mask_RCNN.ipynb` for training setps,
 validation and testing on unseen images.
 
-# Step 2: Simple AI API
+# Step 2: Simple Webserver
 
 Simple Flask webserver which uses Mask RCNN trained to detect and segment face masks in images.
+
+If you don't want to set things up in your computer and just want to try out, here 
+is all-containing co-lab notebook to server a simple webserver.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ArkAung/faceMask_rcnn/blob/master/Step_2_Serve_a_Simple_Webserver.ipynb) 
 
 ### Preparation
 * Download weights file: [link](https://drive.google.com/file/d/1qjAJwsS6Rx2niTIVbak24oKlLitPWZU-/view?usp=sharing)
