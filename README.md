@@ -13,8 +13,7 @@ View [Step_1_Working_Process.md](Step_1_Working_Process.md) for steps taken whil
 
 ### How to Fine-Tune Mask RCNN with Annotated Face Mask Dataset
 * Download annotated dataset. [Link](https://drive.google.com/file/d/1b-G3QmwC0JtlfI6IKsSjw3K3xGxWHLJo/view)
-* Unzip the directory and place the `dataset` folder (which should contain `train` and `val`) under `code`.
-* Change directory to `code`.
+* Unzip the directory and place the `dataset` folder (which should contain `train` and `val`) .
 * Create a conda environment: `conda create -n face_mask python=3.7`.
 * Activate conda environment: `conda activate face_mask`
 * Install requirements: `pip install -r requirements.txt`.
@@ -37,8 +36,7 @@ Simple Flask webserver which uses Mask RCNN trained to detect and segment face m
 * Download weights file: [link](https://drive.google.com/file/d/1qjAJwsS6Rx2niTIVbak24oKlLitPWZU-/view?usp=sharing)
 
 ### How to Run
-* Change directory to code: `cd code`
-* Create conda environment: `conda create -n face_mask python=3.7`
+* If you haven't created a conda environment in Step 1, create conda environment: `conda create -n face_mask python=3.7`
 * Activate environment: `conda activate face_mask`
 * Install required libraries: `pip install -r requirements.txt`
 * Start webserver: `python webserver.py --weights </path/to/downloaded/weight/file> --device [cpu|gpu]`
