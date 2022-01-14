@@ -1,8 +1,11 @@
 # FaceMask-RCNN
 
----
 This repo demonstrates how you can build your own face mask detection mask-rcnn and set up a simple Flask webserver
 to run inference on real world images.
+
+What we want to achieve:
+![Sample result](rss/sample_result.png)
+
 
 # Step 1: Training the Model
 

@@ -1,4 +1,4 @@
-## Task 1. Retrain the model
+## Step 1. Train the model
 
 **Game plan**
  * Get Matterport's Mask-RCNN code running in CoLab. 
